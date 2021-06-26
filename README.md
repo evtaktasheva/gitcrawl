@@ -13,6 +13,13 @@ YOU can help us download the files!
 ## How To Use
 **0. Prerequisites**
 
+Clone this repo and install all the dependencies:
+```
+git clone https://github.com/evtaktasheva/gitcrawl
+cd gitcrawl
+sh install_tools.sh 
+```
+
 For the code to run you will need to create a `conf.py` file with several parameters:
 - `DB_LOGIN`, `DB_PASSWORD`: login and password for a remote database you use
 - `SERVER_LOGIN`, `SERVER_PASSWORD`: login and password for a RabbitMQ message queue
