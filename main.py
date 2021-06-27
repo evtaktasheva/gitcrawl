@@ -12,7 +12,7 @@ cur = conn.cursor()
 
 # select all not downloaded files
 cur.execute("""SELECT file_id, file_link
-               FROM test 
+               FROM gitcrawl 
                WHERE seen != True""")
 messages = cur.fetchall()
 conn.close()
