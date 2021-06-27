@@ -29,7 +29,7 @@ class Downloader(object):
         cur = conn.cursor()
 
         # update file to seen
-        query = "UPDATE test SET seen = %s WHERE file_id = %s"
+        query = "UPDATE gitcrawl SET seen = %s WHERE file_id = %s"
         cur.execute(query, (True, self.id,))
 
         # save to db
