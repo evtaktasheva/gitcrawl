@@ -6,7 +6,7 @@ from conf import DB_PASSWORD, DB_LOGIN, GITHUB_LOGIN, GITHUB_TOKEN
 
 class Downloader(object):
     def __init__(self, file: str):
-        self.id, self.file = file.split()
+        self.id, self.file = file.split(maxsplit=1)
 
     def download(self):
         """
