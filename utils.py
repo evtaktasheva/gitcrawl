@@ -18,7 +18,11 @@ class Downloader(object):
         filedata = filedata.json()
         filename = filedata['name']
         filedata = base64.b64decode(filedata['content'])
-        filedata = filedata.decode('utf-8')
+        # not all the files are utf-8 encoded :(
+        try:
+            filedata = filedata.decode('utf-8')
+        except UnicodeDecodeError:
+            pass
 
         # connect to db
         conn = psycopg2.connect(
